@@ -1,0 +1,56 @@
+[
+  {
+    "id": "rma_2017",
+    "club": "Real Madrid",
+    "year": "2016-17",
+    "players": [
+      {"name": "Cristiano Ronaldo", "pos": "LW", "rating": 94},
+      {"name": "Karim Benzema", "pos": "ST", "rating": 88},
+      {"name": "Gareth Bale", "pos": "RW", "rating": 89},
+      {"name": "Toni Kroos", "pos": "CM", "rating": 90},
+      {"name": "Luka Modric", "pos": "CM", "rating": 89},
+      {"name": "Casemiro", "pos": "CDM", "rating": 85},
+      {"name": "Marcelo", "pos": "LB", "rating": 87},
+      {"name": "Sergio Ramos", "pos": "CB", "rating": 90},
+      {"name": "Raphaël Varane", "pos": "CB", "rating": 85},
+      {"name": "Dani Carvajal", "pos": "RB", "rating": 84},
+      {"name": "Keylor Navas", "pos": "GK", "rating": 85}
+    ]
+  },
+  {
+    "id": "mci_2018",
+    "club": "Manchester City",
+    "year": "2017-18",
+    "players": [
+      {"name": "Sergio Agüero", "pos": "ST", "rating": 89},
+      {"name": "Raheem Sterling", "pos": "RW", "rating": 85},
+      {"name": "Leroy Sané", "pos": "LW", "rating": 86},
+      {"name": "Kevin De Bruyne", "pos": "CAM", "rating": 91},
+      {"name": "David Silva", "pos": "CM", "rating": 89},
+      {"name": "Fernandinho", "pos": "CDM", "rating": 86},
+      {"name": "Fabian Delph", "pos": "LB", "rating": 80},
+      {"name": "Vincent Kompany", "pos": "CB", "rating": 85},
+      {"name": "Nicolás Otamendi", "pos": "CB", "rating": 86},
+      {"name": "Kyle Walker", "pos": "RB", "rating": 84},
+      {"name": "Ederson", "pos": "GK", "rating": 86}
+    ]
+  },
+  {
+    "id": "bar_2011",
+    "club": "Barcelona",
+    "year": "2010-11",
+    "players": [
+      {"name": "David Villa", "pos": "ST", "rating": 89},
+      {"name": "Lionel Messi", "pos": "RW", "rating": 94},
+      {"name": "Pedro", "pos": "LW", "rating": 85},
+      {"name": "Andrés Iniesta", "pos": "CM", "rating": 91},
+      {"name": "Xavi", "pos": "CM", "rating": 92},
+      {"name": "Sergio Busquets", "pos": "CDM", "rating": 87},
+      {"name": "Eric Abidal", "pos": "LB", "rating": 85},
+      {"name": "Carles Puyol", "pos": "CB", "rating": 88},
+      {"name": "Gerard Piqué", "pos": "CB", "rating": 87},
+      {"name": "Dani Alves", "pos": "RB", "rating": 88},
+      {"name": "Víctor Valdés", "pos": "GK", "rating": 85}
+    ]
+  }
+]
