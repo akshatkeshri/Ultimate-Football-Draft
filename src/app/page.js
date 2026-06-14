@@ -432,7 +432,7 @@ export default function DraftGame() {
           </div>
 
           {/* THE STARTING XI PITCH */}
-          <div className="relative w-full max-w-4xl mx-auto bg-[#0a1f11] border-[10px] border-[#050f08] rounded-t-lg aspect-[3/4] sm:aspect-[4/5] flex flex-col justify-between p-4 sm:p-10 overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-4xl mx-auto bg-[#0a1f11] border-[10px] border-[#050f08] rounded-t-lg aspect-[3/4] sm:aspect-[4/5] flex flex-col justify-around gap-1 sm:gap-4 p-2 sm:p-10 overflow-hidden shadow-2xl">
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-1/2 left-0 w-full h-1 bg-white/10 -translate-y-1/2"></div>
               <div className="absolute top-1/2 left-1/2 w-40 h-40 border-4 border-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -441,7 +441,7 @@ export default function DraftGame() {
             </div>
 
             {rosterRows.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex justify-center gap-2 sm:gap-6 w-full z-10">
+              <div key={rowIndex} className="flex justify-center gap-1 sm:gap-6 w-full z-10">
                 {row.map((position, colIndex) => {
                   const slotKey = `${rowIndex}-${colIndex}`;
                   const draftedPlayer = draftedRoster[slotKey];
@@ -454,7 +454,7 @@ export default function DraftGame() {
                     <div
                       key={colIndex}
                       onClick={() => handleSlotClick(slotKey, isPlaceable)}
-                      className={`relative rounded-xl p-2 sm:p-3 flex flex-col items-center justify-center w-[85px] sm:w-[110px] h-[110px] sm:h-[130px] flex-shrink-0 box-border shadow-xl transition-all overflow-hidden ${
+                      className={`relative rounded-xl p-1.5 sm:p-3 flex flex-col items-center justify-center w-[75px] sm:w-[110px] h-[95px] sm:h-[130px] flex-shrink-0 box-border shadow-xl transition-all overflow-hidden ${
                         draftedPlayer
                           ? "bg-[#050505] border-2 border-emerald-500"
                           : isPlaceable
@@ -466,8 +466,8 @@ export default function DraftGame() {
                     >
                       {draftedPlayer ? (
                         <>
-                          <div className="absolute top-1 sm:top-2 left-2 text-emerald-400 font-black text-sm sm:text-lg">{draftedPlayer.rating}</div>
-                          <div className="mt-4 text-center font-bold text-white text-[10px] sm:text-sm leading-tight px-1 w-full truncate">
+                          <div className="absolute top-1 sm:top-2 left-1.5 sm:left-2 text-emerald-400 font-black text-xs sm:text-lg">{draftedPlayer.rating}</div>
+                          <div className="mt-2 text-center font-bold text-white text-[9px] sm:text-sm leading-tight px-1 w-full truncate">
                             {draftedPlayer.player_name}
                           </div>
                           <div className="absolute bottom-1 right-1 text-slate-500 font-bold text-[8px] sm:text-[9px] w-full text-right pr-1 truncate">
@@ -476,10 +476,10 @@ export default function DraftGame() {
                         </>
                       ) : (
                         <>
-                          <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center font-black text-sm sm:text-base border border-slate-800 mb-2 transition-colors ${isPlaceable ? 'text-emerald-400 border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black' : isUnplaceable ? 'text-red-500 border-red-900' : 'text-slate-600'}`}>
+                          <div className={`w-8 h-8 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center font-black text-xs sm:text-base border border-slate-800 mb-1 sm:mb-2 transition-colors ${isPlaceable ? 'text-emerald-400 border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black' : isUnplaceable ? 'text-red-500 border-red-900' : 'text-slate-600'}`}>
                             {position}
                           </div>
-                          <button className={`text-[9px] sm:text-xs font-bold uppercase tracking-wider text-center leading-tight ${isPlaceable ? 'text-emerald-400 group-hover:text-white' : isUnplaceable ? 'text-red-500' : 'text-slate-600'}`}>
+                          <button className={`text-[8px] sm:text-xs font-bold uppercase tracking-wider text-center leading-tight ${isPlaceable ? 'text-emerald-400 group-hover:text-white' : isUnplaceable ? 'text-red-500' : 'text-slate-600'}`}>
                             {isPlaceable ? "Place Here" : isUnplaceable ? "Locked" : "Empty"}
                           </button>
                         </>
@@ -496,7 +496,7 @@ export default function DraftGame() {
             <div className="absolute top-0 w-full h-px bg-slate-800/50"></div>
             <h3 className="text-slate-600 font-black text-xs sm:text-sm uppercase tracking-widest mb-4">Substitutes</h3>
             
-            <div className="flex justify-center gap-3 sm:gap-6 w-full z-10">
+            <div className="flex justify-center gap-2 sm:gap-6 w-full z-10">
               {[0, 1, 2].map((index) => {
                 const slotKey = `bench-${index}`;
                 const draftedPlayer = draftedRoster[slotKey];
@@ -507,7 +507,7 @@ export default function DraftGame() {
                   <div
                     key={index}
                     onClick={() => handleSlotClick(slotKey, isPlaceable)}
-                    className={`relative rounded-xl p-2 sm:p-3 flex flex-col items-center justify-center w-[85px] sm:w-[110px] h-[110px] sm:h-[130px] flex-shrink-0 box-border shadow-xl transition-all overflow-hidden ${
+                    className={`relative rounded-xl p-1.5 sm:p-3 flex flex-col items-center justify-center w-[75px] sm:w-[110px] h-[95px] sm:h-[130px] flex-shrink-0 box-border shadow-xl transition-all overflow-hidden ${
                       draftedPlayer
                         ? "bg-[#111] border-2 border-slate-700"
                         : isPlaceable
@@ -517,8 +517,8 @@ export default function DraftGame() {
                   >
                     {draftedPlayer ? (
                       <>
-                        <div className="absolute top-1 sm:top-2 left-2 text-white font-black text-sm sm:text-lg">{draftedPlayer.rating}</div>
-                        <div className="mt-4 text-center font-bold text-slate-300 text-[10px] sm:text-sm leading-tight px-1 w-full truncate">
+                        <div className="absolute top-1 sm:top-2 left-1.5 sm:left-2 text-white font-black text-xs sm:text-lg">{draftedPlayer.rating}</div>
+                        <div className="mt-2 text-center font-bold text-slate-300 text-[9px] sm:text-sm leading-tight px-1 w-full truncate">
                           {draftedPlayer.player_name}
                         </div>
                         <div className="absolute bottom-1 right-1 text-slate-500 font-bold text-[8px] sm:text-[9px] w-full text-right pr-1 truncate">
@@ -527,10 +527,10 @@ export default function DraftGame() {
                       </>
                     ) : (
                       <>
-                        <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center font-black text-[10px] sm:text-xs border border-slate-800 mb-2 transition-colors ${isPlaceable ? 'text-emerald-400 border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black' : 'text-slate-700'}`}>
+                        <div className={`w-8 h-8 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center font-black text-[10px] sm:text-xs border border-slate-800 mb-1 sm:mb-2 transition-colors ${isPlaceable ? 'text-emerald-400 border-emerald-500 group-hover:bg-emerald-500 group-hover:text-black' : 'text-slate-700'}`}>
                           SUB
                         </div>
-                        <button className={`text-[9px] sm:text-xs font-bold uppercase tracking-wider text-center leading-tight ${isPlaceable ? 'text-emerald-400 group-hover:text-white' : 'text-slate-700'}`}>
+                        <button className={`text-[8px] sm:text-xs font-bold uppercase tracking-wider text-center leading-tight ${isPlaceable ? 'text-emerald-400 group-hover:text-white' : 'text-slate-700'}`}>
                           {isPlaceable ? "Place Here" : "Empty"}
                         </button>
                       </>
@@ -792,7 +792,7 @@ export default function DraftGame() {
                         className="bg-[#050505] border border-slate-800 hover:border-emerald-500 rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center group transition-all hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(16,185,129,0.1)] relative overflow-hidden"
                       >
                         <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <span className="text-3xl sm:text-4xl font-black text-white group-hover:text-emerald-400 transition-colors z-10">
+                        <span className="whitespace-nowrap text-2xl sm:text-4xl font-black text-white group-hover:text-emerald-400 transition-colors z-10">
                           {formation}
                         </span>
                         <span className="text-slate-500 text-[10px] sm:text-xs mt-3 uppercase tracking-widest font-bold z-10">
