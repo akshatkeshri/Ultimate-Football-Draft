@@ -2,7 +2,7 @@
 
 **[🔴 Play the Live App Here](https://ultimate-football-draft.vercel.app)**
 
-A full-stack, data-driven web application that allows users to draft a football squad from historical datasets and simulate full 38-game seasons or Champions League knockout brackets against AI opponents. 
+A statistical simulation engine built on a PostgreSQL relational database managing thousands of historical player records — with a Next.js dashboard as the visualization layer which allows users to draft a football squad from historical datasets and simulate full 38-game seasons or Champions League knockout brackets against AI opponents. 
 
 Built with a focus on relational data management, probabilistic modeling, and state-driven UI.
 
